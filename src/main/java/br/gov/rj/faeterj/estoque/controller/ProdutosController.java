@@ -2,6 +2,9 @@ package br.gov.rj.faeterj.estoque.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import br.gov.rj.faeterj.estoque.model.Produto;
 
 @Controller
 public class ProdutosController {
@@ -14,6 +17,10 @@ public class ProdutosController {
 	}
 	// A partir deste controller será possível renderizar o HTML
 	
+	@RequestMapping(value = "/produtos/novo", method = RequestMethod.POST)
+	public  String cadastrar(Produto produto) {
+		System.out.println("SKU >>>>>:" + produto.getSku());
+		return "produto/CadastroProduto";
+	}
 	
-	
-}	
+}
