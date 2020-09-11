@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8"/>
 	<title>Thymeleaf configurado</title>
@@ -8,12 +8,15 @@
 <body>
 	<h1>Olá! <i>Thymeleaf</i> configurado por Cleyton!</h1><br>
 	<form method="POST">
+		<span th:text=${mensagem}></span>
+		<br>
+	
 		<label for="sku">SKU</label>
 		<input type="text" id="sku" name="sku">
 		<br>
+		
 		<input type="submit" value="Salvar"> 
 	</form>
 
 </body>
-
 </html>
