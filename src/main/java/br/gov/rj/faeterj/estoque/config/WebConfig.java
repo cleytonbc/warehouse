@@ -50,6 +50,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 		// (5) Responsável por pegar o templateResolver para colocá-lo
 		// em ação, quem implementará a aplicação MVC
 		// Ele irá processar os arquivos HTML
+		engine.addDialect(new LayoutDialect());
 		return engine;
 	}
 
