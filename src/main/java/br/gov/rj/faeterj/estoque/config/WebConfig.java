@@ -1,4 +1,4 @@
-package br.gov.rj.faeterj.estoque.config;
+	package br.gov.rj.faeterj.estoque.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -18,6 +18,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
 import br.gov.rj.faeterj.estoque.controller.ProdutosController;
+import nz.net.ultraq.thymeleaf.LayoutDialect;
 
 @Configuration
 @ComponentScan(basePackageClasses = { ProdutosController.class })//(2)Define onde encontrar os controllers
